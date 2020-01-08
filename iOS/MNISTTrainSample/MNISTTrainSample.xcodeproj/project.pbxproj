@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A0B67ED23C5909100886F14 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 8A0B67EC23C5909100886F14 /* data */; };
+		8A0B67EF23C629B400886F14 /* UpdatableMNISTDigitClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8A0B67EE23C629B400886F14 /* UpdatableMNISTDigitClassifier.mlmodel */; };
 		8A501F822397C0D8001A8F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A501F812397C0D8001A8F87 /* AppDelegate.swift */; };
 		8A501F842397C0D8001A8F87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A501F832397C0D8001A8F87 /* SceneDelegate.swift */; };
 		8A501F862397C0D8001A8F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A501F852397C0D8001A8F87 /* ViewController.swift */; };
@@ -17,7 +18,6 @@
 		8A501F992397C0D8001A8F87 /* KerasMNISTSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A501F982397C0D8001A8F87 /* KerasMNISTSampleTests.swift */; };
 		8A501FA42397C24A001A8F87 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A501FA32397C24A001A8F87 /* DrawView.swift */; };
 		8A501FA823988B41001A8F87 /* DigitClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A501FA723988B41001A8F87 /* DigitClassifier.swift */; };
-		8AB2073B23BED57C00B2F7CC /* UpdatableMNISTDigitClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2073A23BED57C00B2F7CC /* UpdatableMNISTDigitClassifier.mlmodel */; };
 		8AB2074023BEFD4B00B2F7CC /* KRProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8AB2073F23BEFD4B00B2F7CC /* KRProgressHUD */; };
 		8AB2074223BF11DB00B2F7CC /* KRProgressHUD+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2074123BF11DB00B2F7CC /* KRProgressHUD+Helper.swift */; };
 		8AB2074423BF14A500B2F7CC /* ModelUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2074323BF14A500B2F7CC /* ModelUpdater.swift */; };
@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		8A0B67EC23C5909100886F14 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../data; sourceTree = "<group>"; };
+		8A0B67EE23C629B400886F14 /* UpdatableMNISTDigitClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = UpdatableMNISTDigitClassifier.mlmodel; path = ../models/UpdatableMNISTDigitClassifier.mlmodel; sourceTree = "<group>"; };
 		8A501F7E2397C0D8001A8F87 /* MNISTTrainSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNISTTrainSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A501F812397C0D8001A8F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A501F832397C0D8001A8F87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		8A501F9A2397C0D8001A8F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A501FA32397C24A001A8F87 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		8A501FA723988B41001A8F87 /* DigitClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitClassifier.swift; sourceTree = "<group>"; };
-		8AB2073A23BED57C00B2F7CC /* UpdatableMNISTDigitClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = UpdatableMNISTDigitClassifier.mlmodel; path = ../../Keras/UpdatableMNISTDigitClassifier.mlmodel; sourceTree = "<group>"; };
 		8AB2074123BF11DB00B2F7CC /* KRProgressHUD+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KRProgressHUD+Helper.swift"; sourceTree = "<group>"; };
 		8AB2074323BF14A500B2F7CC /* ModelUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelUpdater.swift; sourceTree = "<group>"; };
 		8AB2074523BF15B900B2F7CC /* TrainingDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataProvider.swift; sourceTree = "<group>"; };
@@ -79,8 +79,8 @@
 		8A501F752397C0D8001A8F87 = {
 			isa = PBXGroup;
 			children = (
+				8A0B67EE23C629B400886F14 /* UpdatableMNISTDigitClassifier.mlmodel */,
 				8A0B67EC23C5909100886F14 /* data */,
-				8AB2073A23BED57C00B2F7CC /* UpdatableMNISTDigitClassifier.mlmodel */,
 				8A501F802397C0D8001A8F87 /* MNISTTrainSample */,
 				8A501F972397C0D8001A8F87 /* MNISTTrainSampleTests */,
 				8A501F7F2397C0D8001A8F87 /* Products */,
@@ -233,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0B67EF23C629B400886F14 /* UpdatableMNISTDigitClassifier.mlmodel in Sources */,
 				8A501F862397C0D8001A8F87 /* ViewController.swift in Sources */,
 				8A501F822397C0D8001A8F87 /* AppDelegate.swift in Sources */,
 				8AC4D4A423AF09610011B7F5 /* UpdatableMNISTDigitClassifier+Updating.swift in Sources */,
@@ -240,7 +241,6 @@
 				8AB2074423BF14A500B2F7CC /* ModelUpdater.swift in Sources */,
 				8A501FA42397C24A001A8F87 /* DrawView.swift in Sources */,
 				8AB2074623BF15B900B2F7CC /* TrainingDataProvider.swift in Sources */,
-				8AB2073B23BED57C00B2F7CC /* UpdatableMNISTDigitClassifier.mlmodel in Sources */,
 				8A501FA823988B41001A8F87 /* DigitClassifier.swift in Sources */,
 				8A501F842397C0D8001A8F87 /* SceneDelegate.swift in Sources */,
 			);
