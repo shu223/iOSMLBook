@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MNISTTrainSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIO-dT-WVJ">
+                                <rect key="frame" x="169" y="698" width="76" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="DETECT"/>
+                                <connections>
+                                    <action selector="detectButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEC-b8-WLx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leM-bB-8Bd">
+                                <rect key="frame" x="192.5" y="742" width="29" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="42"/>
+                                <color key="textColor" red="0.1294117719" green="0.1294117719" blue="0.1294117719" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pQ-x6-49N">
+                                <rect key="frame" x="183" y="808.5" width="48" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearBtnTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q2X-Nv-fBB"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tr-bD-ogj" customClass="DrawView" customModule="MNISTTrainSample" customModuleProvider="target">
+                                <rect key="frame" x="87" y="450" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Arm-Dl-mZJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="LEO-P5-6CW"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twd-bl-BhV">
+                                <rect key="frame" x="182.5" y="60" width="49.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBp-Xp-ufa">
+                                <rect key="frame" x="16" y="136" width="382" height="282"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MX-HB-4Z3">
+                                <rect key="frame" x="178" y="92" width="58" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="TRAIN"/>
+                                <connections>
+                                    <action selector="trainButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syk-Mu-TbJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1tr-bD-ogj" secondAttribute="bottom" constant="172" id="8oE-3p-xb9"/>
+                            <constraint firstItem="twd-bl-BhV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Bqj-58-No1"/>
+                            <constraint firstItem="DBp-Xp-ufa" firstAttribute="top" secondItem="1MX-HB-4Z3" secondAttribute="bottom" constant="8" id="Hap-aI-Q6f"/>
+                            <constraint firstItem="yIO-dT-WVJ" firstAttribute="centerX" secondItem="1tr-bD-ogj" secondAttribute="centerX" id="IBT-db-oOv"/>
+                            <constraint firstItem="3pQ-x6-49N" firstAttribute="top" secondItem="yIO-dT-WVJ" secondAttribute="bottom" constant="74.5" id="IeT-h3-U1K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DBp-Xp-ufa" secondAttribute="trailing" constant="16" id="Pjk-Cn-IUh"/>
+                            <constraint firstItem="leM-bB-8Bd" firstAttribute="centerX" secondItem="1tr-bD-ogj" secondAttribute="centerX" id="WEk-8X-g3U"/>
+                            <constraint firstItem="1tr-bD-ogj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XiG-PH-AD3"/>
+                            <constraint firstItem="DBp-Xp-ufa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YFs-Nk-KMS"/>
+                            <constraint firstItem="1MX-HB-4Z3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ccs-kV-jqr"/>
+                            <constraint firstItem="1MX-HB-4Z3" firstAttribute="top" secondItem="twd-bl-BhV" secondAttribute="bottom" constant="8" id="eRn-Fy-PPB"/>
+                            <constraint firstItem="3pQ-x6-49N" firstAttribute="centerX" secondItem="leM-bB-8Bd" secondAttribute="centerX" id="kzH-qr-MGJ"/>
+                            <constraint firstItem="leM-bB-8Bd" firstAttribute="top" secondItem="yIO-dT-WVJ" secondAttribute="bottom" constant="8" id="muo-jG-c5Y"/>
+                            <constraint firstItem="yIO-dT-WVJ" firstAttribute="top" secondItem="1tr-bD-ogj" secondAttribute="bottom" constant="8" id="okE-pH-w2N"/>
+                            <constraint firstItem="1tr-bD-ogj" firstAttribute="top" secondItem="DBp-Xp-ufa" secondAttribute="bottom" constant="32" id="xYc-nb-5Jy"/>
+                            <constraint firstItem="twd-bl-BhV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zUk-Vi-4gx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="clearBtn" destination="3pQ-x6-49N" id="yPI-V3-Olp"/>
+                        <outlet property="drawView" destination="1tr-bD-ogj" id="MxI-xf-gyG"/>
+                        <outlet property="logTextView" destination="DBp-Xp-ufa" id="BbB-bi-ftS"/>
+                        <outlet property="modelStateLabel" destination="twd-bl-BhV" id="gRD-Gc-ayh"/>
+                        <outlet property="predictionLabel" destination="leM-bB-8Bd" id="Pcz-JW-m1k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
