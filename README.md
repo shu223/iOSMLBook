@@ -8,11 +8,18 @@ Keras/TensorFlowでモデルを構築・学習し、Core ML Tools（`coremltools
 
 入門としてのシンプルなカスタムモデルの構築から、Core ML 3の目玉機能である「オンデバイス学習」（モデルの更新をiOS側で行う）まで解説しています。
 
+<div align="center">
+
+<img src="on-device-training.gif">
+<br/>
+(On-Device Training)
+</div>
+
 また`coremltools`, `tfcoreml`を駆使して学習済みモデルをCore MLモデルに変換する方法も、本書では詳しく解説します。インターネット上に数多く公開されている優れたモデル達を自らCore MLモデルに変換し、**必要に応じてカスタマイズ・改善**できるようになれば大きく引き出しが広がるでしょう。
 
 <div align="center">
 
-<img src="on-device-training.gif">
+<img src="styletransfer.gif">
 <br/>
 (On-Device Training)
 </div>
@@ -109,3 +116,16 @@ Keras/TensorFlowでモデルを構築・学習し、Core ML Tools（`coremltools
   - 9.3.2 入力の型を画像に変更する
 - 9.4 iOSで推論を実行 
 - 9.5 入力画像の前処理を指定する
+
+第10章TensorFlowモデルの変換 - 画風変換モデル
+
+- 10.1 学習済みモデルからグラフ定義を読み込む
+- 10.2 変換に必要なグラフの情報を取得する
+  - 10.2.1 入力テンソルの名前を取得する
+  - 10.2.2 出力テンソルの名前を取得する
+- 10.3 tfcoremlを用いて変換する
+  - 10.3.1 入力テンソルのshape を指定する
+- 10.4 Core MLモデルの出力の型を変更する
+- 10.5 iOSで画風変換を実行
+  - 10.5.1 複数の入力を持つCore MLモデルをVisionで使う
+  - 10.5.2 出力画像を取得する
