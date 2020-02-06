@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CircularCarousel",
+        "repositoryURL": "https://github.com/Ramotion/circular-carousel",
+        "state": {
+          "branch": null,
+          "revision": "26c7f7f7f7dce6b43ff2c219c71407f27526458e",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

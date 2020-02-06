@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StyleTransferSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_4340" translatesAutoresizingMaskIntoConstraints="NO" id="Bhn-bg-23C">
+                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bhn-bg-23C" secondAttribute="height" multiplier="1:1" id="YP6-PD-JtZ"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeF-sl-Nox" customClass="CircularCarousel" customModule="CircularCarousel">
+                                <rect key="frame" x="0.0" y="490" width="414" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="xVA-2V-LDG"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVK-m6-rsu">
+                                <rect key="frame" x="184" y="618" width="46" height="30"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8KU-C4-qRO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bhn-bg-23C" secondAttribute="trailing" id="Jit-fB-dc3"/>
+                            <constraint firstItem="AeF-sl-Nox" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rrl-hg-g4q"/>
+                            <constraint firstItem="vVK-m6-rsu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="St5-0Y-XId"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AeF-sl-Nox" secondAttribute="trailing" id="Vnv-ic-xaj"/>
+                            <constraint firstItem="AeF-sl-Nox" firstAttribute="top" secondItem="Bhn-bg-23C" secondAttribute="bottom" constant="32" id="cbI-6F-9UZ"/>
+                            <constraint firstItem="Bhn-bg-23C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="obF-V0-TxV"/>
+                            <constraint firstItem="Bhn-bg-23C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uxX-2l-oOr"/>
+                            <constraint firstItem="vVK-m6-rsu" firstAttribute="top" secondItem="AeF-sl-Nox" secondAttribute="bottom" constant="8" id="zdY-fI-1eJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="carousel" destination="AeF-sl-Nox" id="EcK-yn-1er"/>
+                        <outlet property="imageView" destination="Bhn-bg-23C" id="jPj-gX-iPt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_4340" width="2505" height="2505"/>
+    </resources>
+</document>
