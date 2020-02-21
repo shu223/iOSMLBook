@@ -8,23 +8,10 @@
 
 最初はごくごくシンプルな画像分類CNNの構築方法からはじめてKerasやCore ML Toolsに入門しつつ、出力も画像となるタイプのモデルや、Core ML 3の目玉新機能である「オンデバイス学習」等も解説していきます。
 
-<div align="center">
-
-<img src="on-device-training.gif">
-<br/>
-(On-Device Training)
-</div>
-
 また`coremltools`, `tfcoreml`を駆使して学習済みモデルをCore MLモデルに変換する方法も、本書では詳しく解説します。インターネット上に数多く公開されている優れたモデル達を自らCore MLモデルに変換し、**必要に応じてカスタマイズ・改善**できるようになれば大きく引き出しが広がるでしょう。
 
-<div align="center">
+B5版、本文140ページ。
 
-<img src="styletransfer.gif">
-<br/>
-(On-Device Training)
-</div>
-
-B5版、本文120ページ。
 
 ## 目次
 
@@ -91,6 +78,13 @@ B5版、本文120ページ。
 - 6.4 オンデバイスで学習したモデルを保存する / MLUpdateContext, MLWritable
 - 6.5 推論処理の実行
 
+<div align="center">
+
+<img src="images/on-device-training.gif">
+<br/>
+(On-Device Training)
+</div>
+
 第7章 TensorFlowモデルの変換 - 基礎編
 
 - 7.1 tfcoreml
@@ -117,12 +111,46 @@ B5版、本文120ページ。
   - 8.5.1 複数の入力を持つCore MLモデルをVisionで使う
   - 8.5.2 出力画像を取得する
 
-第9章 モデルの可視化- 9.1 Netron
-- 9.2 coremltoolsのvisualize_spec
-- 9.3 TensorBoard
-  - 9.3.1 TensorFlowモデルのグラフを可視化
-  - 9.3.2 Kerasでの学習状況を可視化
-- 9.4 Kerasのplot_model
+<div align="center">
+<img src="images/styletransfer.gif">
+<br/>
+(Style Transfer - Pre-trained models conversion)
+</div>
+
+第9章 Flexible Shape - 超解像モデル
+
+- 9.1 Flexible Shapeとは/使いどころ
+- 9.2 超解像モデルをCore MLモデルに変換する
+- 9.3 Flexible Shapeを適用する
+- 9.4 iOS側での推論処理の実行
+
+<div align="center">
+<img src="images/srcnn_results.png" width="70%">
+<br/>
+(Super Resolution - Flexible Shapes)
+</div>
+
+第10章 Core ML モデルのサイズを小さくする
+
+- 10.1 本章で利用する感情認識モデルについて
+- 10.2 重みを16ビット化する
+  - 10.2.1 16ビット化が「推論結果の精度とのトレードオフが少ない」理由
+  - 10.2.2 Core MLモデルを16ビット化する手順
+- 10.3 クォンタイズ
+- 10.4 iOSでの推論結果の比較
+
+<div align="center">
+<img src="images/emotion-results.png">
+<br/>
+(Emotion Recognition - Quantization)
+</div>
+
+第11章 モデルの可視化- 11.1 Netron
+- 11.2 coremltoolsのvisualize_spec
+- 11.3 TensorBoard
+  - 11.3.1 TensorFlowモデルのグラフを可視化
+  - 11.3.2 Kerasでの学習状況を可視化
+- 11.4 Kerasのplot_model
 
 付録A coremltools逆引きリファレンス
 - A.1 モデルのSpecを取得する
@@ -133,10 +161,17 @@ B5版、本文120ページ。
   - A.7.1 入力・出力名を指定する  - A.7.2 変換時に入力の型を画像型にする
   - A.7.3 変換済みモデルの入力・出力の型を画像型にする  - A.7.4 入力テンソルのshapeを指定する
   - A.7.5 入力画像の前処理を指定する
-- A.8 オンデバイス学習関連
-  - A.8.1 モデルがUpdatableかどうかを調べる
-  - A.8.2 Updatableなレイヤー一覧を出力  - A.8.3 Updatableなモデルに変換する
-  - A.8.4 学習で使用する損失関数をセットする  - A.8.5 損失関数のサマリを確認する
-  - A.8.6 学習で使用する最適化アルゴリズム（オプティマイザ）をセットする
-  - A.8.7 最適化アルゴリズムを確認する
-  - A.8.8 エポック数をセットする
+- A.8 モデルサイズを圧縮する
+  - A.8.1 重みを16ビット(半精度)化する
+  - A.8.2 重みをクォンタイズする
+- A.9 オンデバイス学習関連
+  - A.9.1 モデルがUpdatableかどうかを調べる
+  - A.9.2 Updatableなレイヤー一覧を出力  - A.9.3 Updatableなモデルに変換する
+  - A.9.4 学習で使用する損失関数をセットする  - A.9.5 損失関数のサマリを確認する
+  - A.9.6 学習で使用する最適化アルゴリズム（オプティマイザ）をセットする
+  - A.9.7 最適化アルゴリズムを確認する
+  - A.9.8 エポック数をセットする
+- A.10 FlexibleShape関連
+  - A.10.1 FlexibleShapeの適用可否を確認する
+  - A.10.2 入力・出力の画像サイズを範囲で指定する
+  - A.10.3 入力・出力に複数の画像サイズを指定する
