@@ -57,6 +57,7 @@ class ViewController: UIViewController {
                 self.imageView.image = image
             }
         }
+        request.usesCPUOnly = true
                 
         guard let cgImage = originalImage.cgImage else { fatalError() }
         let handler = VNImageRequestHandler(cgImage: cgImage)

@@ -112,7 +112,7 @@ B5版、本文140ページ。
   - 8.5.2 出力画像を取得する
 
 <div align="center">
-<img src="images/styletransfer.gif">
+<img src="images/styletransfer_512.gif">
 <br/>
 (Style Transfer - Pre-trained models conversion)
 </div>
