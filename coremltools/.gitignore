@@ -44,6 +44,5 @@ geckodriver.log
 *.iml
 
 *.mlmodel
-*.h5
 *.pb
 imagenet_slim_labels.txt
